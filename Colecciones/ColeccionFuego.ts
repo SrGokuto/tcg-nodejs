@@ -11,7 +11,7 @@ class ColeccionFuego {
         this.cartas = this.inicializarCartas();
     }
 
-    private inicializarCartas(): Carta[] {
+    public inicializarCartas(): Carta[] {
         return [
             // Criaturas de Fuego
             new CartaCriatura(
@@ -69,51 +69,6 @@ class ColeccionFuego {
                 "Inflige 8 puntos de daño a un objetivo y 2 a criaturas adyacentes"
             )
         ];
-    }
-
-    public obtenerCartas(): Carta[] {
-        return [...this.cartas];
-    }
-
-    public obtenerCartaPorNombre(nombre: string): Carta | undefined {
-        return this.cartas.find(carta => carta.nombre === nombre);
-    }
-
-    public obtenerCartasPorCosto(costo: number): Carta[] {
-        return this.cartas.filter(carta => carta.costo === costo);
-    }
-
-    public obtenerCriaturas(): CartaCriatura[] {
-        return this.cartas.filter(carta => carta instanceof CartaCriatura) as CartaCriatura[];
-    }
-
-    public obtenerHechizos(): CartaHechizo[] {
-        return this.cartas.filter(carta => carta instanceof CartaHechizo) as CartaHechizo[];
-    }
-
-    public obtenerNombre(): string {
-        return this.nombre;
-    }
-
-    public obtenerTamaño(): number {
-        return this.cartas.length;
-    }
-
-    public mostrarColeccion(): string {
-        let resultado = `=== ${this.nombre} ===\n`;
-        resultado += `Total de cartas: ${this.cartas.length}\n\n`;
-        
-        resultado += "CRIATURAS:\n";
-        this.obtenerCriaturas().forEach(criatura => {
-            resultado += `- ${criatura.nombre} (${criatura.costo} maná) - ATK: ${criatura.ataque}, DEF: ${criatura.defensa}\n`;
-        });
-        
-        resultado += "\nHECHIZOS:\n";
-        this.obtenerHechizos().forEach(hechizo => {
-            resultado += `- ${hechizo.nombre} (${hechizo.costo} maná) - ${hechizo.efecto}\n`;
-        });
-        
-        return resultado;
     }
 }
 

@@ -7,9 +7,6 @@ class Carta {
         this.descripcion = descripcion;
         this.costo = costo;
     }
-    public usar():string {
-        return "Usando la carta: " + this.nombre;
-    }
 }
 
 export default Carta;

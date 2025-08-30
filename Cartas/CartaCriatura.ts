@@ -7,12 +7,6 @@ class CartaCriatura extends Carta{
         this.ataque = ataque;
         this.defensa = defensa;
     }
-    public atacar(objetivo: CartaCriatura): string {
-        return this.nombre + " ataca a " + objetivo.nombre + " con " + this.ataque + " de ataque.";
-    }
-    public recibirDano(dano: number): void{
-        this.defensa -= dano;
-    }
 }
 
 export default CartaCriatura;

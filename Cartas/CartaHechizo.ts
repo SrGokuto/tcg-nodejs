@@ -5,9 +5,6 @@ class CartaHechizo extends Carta{
         super(nombre, descripcion, costo);
         this.efecto = efecto;
     }
-    public activarEfecto():string {
-        return "Activando la carta hechizo: " + this.nombre + " con efecto " + this.efecto;
-    }
 }
 
 export default CartaHechizo;
