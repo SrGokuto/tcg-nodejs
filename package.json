@@ -1,0 +1,22 @@
+{
+  "name": "29agosto",
+  "version": "1.0.0",
+  "description": "class activity with node js",
+  "license": "GPL-3.0",
+  "author": "SrGokuto",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc",
+    "dev": "ts-node --esm"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.8.4",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2"
+  }
+}
